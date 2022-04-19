@@ -189,7 +189,7 @@ img:hover{
     font-size: 1.3rem;
 }
 
-#generator-label{
+.generator-label{
 	margin-bottom: 10px;
 }
 
@@ -449,9 +449,6 @@ form{
 	.meme-gallery {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 16px;
-		justify-items: center;
-		align-items: center;
 	}
 }
 
