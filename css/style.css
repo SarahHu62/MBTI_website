@@ -189,6 +189,10 @@ img:hover{
     font-size: 1.3rem;
 }
 
+#generator-label{
+	margin-bottom: 10px;
+}
+
 /* center image */
 .center_img{
     animation: animate 2s;
