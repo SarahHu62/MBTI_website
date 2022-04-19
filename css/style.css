@@ -525,8 +525,11 @@ form{
     .flip-card:hover .flip-card-inner {
         transform: none;
     }
-      
     .flip-card:focus .flip-card-inner {
         transform: none;
     }
+
+	.bgimg{
+		background-attachment: none;
+	  }
 }
