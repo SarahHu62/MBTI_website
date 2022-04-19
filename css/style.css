@@ -2,71 +2,95 @@ body{
 	font-family: 'Roboto Slab', serif;
 	width: 90vw;
 	box-sizing: border-box;
-	display:flex;
+	display: flex;
 	flex-flow:column nowrap;
     margin: 0 auto;
 	height:100vh;
     background-image: url(../images/background.jpeg);
 }
 
-/*nav bar*/
 .skip{
-    display: none;
+	position:absolute;
+	top: -600px;
 }
 
+/* nav bar */
 *{
 	margin: 0;
 	padding: 0;
-  }
+}
 
-  a{
+a{
 	text-decoration: none;
-  }
+}
 
-  .navbar{
+.navbar{
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	width: 90vw;
-	margin: 24px auto;
+	margin: 18px auto;
 	padding-top: 2%;
 	padding-bottom: 2%;
 	background-color: rgb(216, 226, 239);
 	font-size: 20px;
-	border-radius: 10px;
-  }
+}
 
-  .logo_header{
-	display: flex;
-	margin-left: 2%;
-  }
 
-  .main_nav{
-	display: flex;
-	width: 50%;
-	float: right;
-	margin-right: 2%;
-	justify-content: space-between;
-	list-style: none;
-  }
-  .main_nav .active{
-	text-transform: uppercase;
-  }
-  .main_nav li:hover{
-	background-color: rgb(255, 255, 255)
-  }
-
-  .main_nav li{
-	display: inline;
-	color: black;
-  }
-  .main_nav li a{
-	color: black;
-  }
-
-.navbar_toggle {
+.main_nav{
 	display: none;
 }
 
+.show_nav{
+	padding-top: 2%;
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.main_nav li{
+	width: 80%;
+	height: auto;
+	font-size: 24px;
+	text-align: center;
+	padding: 20px;
+	margin: 20px 10px;
+	border-radius: 10px;
+}
+
+.main_nav .active{
+	text-transform: uppercase;
+}
+
+.main_nav li:hover{
+	background-color: rgb(255, 255, 255);
+}
+
+.main_nav li a{
+	color: black;
+}
+
+.navbar_toggle {
+	margin-left: 5%;
+	margin-right: 5%;
+	font-size: 30px;
+	color: #000000;
+	background: transparent;
+	border-color: transparent;
+	transition: all 0.3s linear;
+	cursor: pointer;
+	display: block;
+}
+.logo_header{
+	width: 100%;
+	justify-content: space-between;
+	margin-right: 2%;
+}
+
+
+/*body styling*/
 h1 {
     font-family: 'Rubik', sans-serif;
     font-size: 40px;
@@ -111,9 +135,42 @@ img:hover{
 	transform: scale(1.02);
 }
 
+/* paralex image */
+.bgimg {
+    background-image: url(../images/hero-image.jpeg);
+    min-height: 70vh;
+	margin-bottom: 10vh;
+}
+.bgimg {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.caption {
+  height: 300px;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  padding-top: 100px;
+}
+
+.caption span.border {
+  background-color: #2e2e2e;
+  color: rgb(255, 255, 255);
+  padding: 18px;
+  font-size: 40px;
+  letter-spacing: 10px;
+}
+
+/*meme generator*/
 #meme {
 	margin: auto;
-	width: 60%;
+	width: 80vw;
 	padding: 10px;
 }
 
@@ -132,6 +189,16 @@ img:hover{
     font-size: 1.3rem;
 }
 
+/* center image */
+.center_img{
+    animation: animate 2s;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
 @keyframes animate {
     0% {
         transform: translateY(-100px);
@@ -143,121 +210,119 @@ img:hover{
     }
 }
 
-.center_img{
-    animation: animate 2s;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+/*style for gallery page*/
+.gallery-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.25s ease-in-out;
 }
 
-
-
-
-/* .row {
-	display: -ms-flexbox;
+.ga_image {
 	display: flex;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	padding: 0 4px 100px 0;
-} */
-
-/* .column {
-	-ms-flex: 30%;
-	flex: 30%;
-	max-width: 30%;
-	padding: 0 4px;
-} */
-
-/* .column img {
-	margin-top: 8px;
-	vertical-align: middle;
-	width: 100%;
-} */
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-	.column {
-	  -ms-flex: 50%;
-	  flex: 50%;
-	  max-width: 50%;
-	}
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-	.column {
-	  -ms-flex: 100%;
-	  flex: 100%;
-	  max-width: 100%;
-	}
-}
-
-footer{
-	padding: 32px 8px;
-	font-size: small;
-}
-
-@media only screen and (max-width: 992px) {
-.navbar{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 90vw;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    background-color: rgb(216, 226, 239);
-    font-size: 20px;
-	border-radius: 6px;
-  }
-
-  .main_nav{
-    display: none;
-  }
-
-  .show_nav{
-    padding-top: 2%;
-    display: flex;
-    width: 90vw;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
-  .main_nav li{
-    width: 100%;
-    height: 50px;
-    font-size: 25px;
-    justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: .5rem;
+    font-size: 1.2rem;
     text-align: center;
+    background-color: rgb(216, 226, 239);
+	border-radius: 10px;
+}
+
+.ga_image .galleries{
+	width: 80%;
+	height: auto;
+	margin-bottom: 20px;
+	object-fit: cover;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* flip card */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card:focus .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-back {
+    background-color: rgb(216, 226, 239);
+    color: black;
+    border-radius: 10px;
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-back > h2{
+      color:black;
+      padding-top: 50px;
+
+  }
+
+#celebrity_img1{
+    width:300px;
+    height:200px;
+    border: none;
     padding: 0%;
-  }
-  .navbar_toggle {
-    margin-left: 5%;
-    margin-right: 5%;
-    font-size: 30px;
-    color: #000000;
-    background: transparent;
-    border-color: transparent;
-    transition: all 0.3s linear;
-    cursor: pointer;
-    display: block;
-  }
-  .logo_header{
-    width: 100%;
-    justify-content: space-between;
-    margin-right: 2%;
-  }
+    margin: 0%;
+}
+#celebrity_img2{
+    width:300px;
+    height:200px;
+    border: none;
+    padding: 0%;
+    margin: 0%;
+}
+#celebrity_img3{
+    width:300px;
+    height:200px;
+    border: none;
+    padding: 0%;
+    margin: 0%;
 }
 
 
-.bottom{
-    background-color: rgb(216, 226, 239);
-    padding: 24px 8px;
-    margin-top: 60px;
-    text-align: center;
+.flip_wapper{
+    display: flex;
+	flex-direction: row;
+	justify-content:space-evenly;
+	align-items: center;
+    flex-flow: row wrap;
 }
 
+
+/* footor styling */
 .bottom{
     background-color: rgb(216, 226, 239);
     padding: 24px 8px;
@@ -268,9 +333,10 @@ footer{
 /*contact form*/
 form {
 	border-radius: 6px;
-    background-color: rgb(216, 226, 239);
-
-  }
+}
+fieldset{
+	border: white;
+}
 
 legend {
 	font-size: 1.3rem;
@@ -291,17 +357,18 @@ label{
 input {
 	padding: 12px 20px;
 	display: inline-block;
-	border: 1px solid #ccc;
+	border: 1px solid rgb(255, 255, 255);
 	box-sizing: border-box;
     border-radius: 6px;
     width: 100%;
+	margin-bottom: 10px;
 }
 
 textarea{
 	height: 10vh;
 	padding: 12px 20px;
 	display: inline-block;
-	border: 1px solid #ccc;
+	border: 1px solid rgb(255, 255, 255);
 	box-sizing: border-box;
     border-radius: 6px;
     width: 100%;
@@ -330,29 +397,136 @@ input[type=submit]:hover {
 }
 
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (min-width: 800px) {
-	form{
-	  padding: 10%;
-	}
-
-	input{
-	  width: 100%;
-	}
-
-	textarea{
-	  width: 100%;
-	  height: 8vh;
-   }
-
-   div + label{
-	  line-height: 10vh;
-	  vertical-align:top;
-   }
+footer{
+	padding: 32px 8px;
+	font-size: small;
 }
+
+form{
+	padding: 2%;
+  }
+
+  input{
+	width: 100%;
+  }
+
+  textarea{
+	width: 100%;
+	height: 8vh;
+ }
+
+ div + label{
+	line-height: 10vh;
+	vertical-align:top;
+ }
+
+.meme-gallery {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 16px;
+	justify-items: center;
+	align-items: center;
+}
+
+@media only screen and (min-width: 550px) {
+	.meme-gallery {
+		display: grid;
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-columns: repeat(2,1fr);
+		grid-gap: 16px;
+		justify-items: center;
+		align-items: center;
+	}
+}
+
+
+
+@media only screen and (min-width: 770px) {
+	.meme-gallery {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 16px;
+		justify-items: center;
+		align-items: center;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.skip{
+		position:absolute;
+		top: -600px;
+	}
+
+	*{
+		margin: 0;
+		padding: 0;
+	}
+
+	a{
+		text-decoration: none;
+	}
+
+	.navbar{
+		display: flex;
+		justify-content: space-between;
+		width: 90vw;
+		margin: 24px auto;
+		padding-top: 2%;
+		padding-bottom: 2%;
+		background-color: rgb(216, 226, 239);
+		font-size: 18px;
+	}
+
+	.logo_header{
+		display: flex;
+		margin-left: 2%;
+	}
+
+	.main_nav{
+		display: flex;
+		width: 100%;
+		float: center;
+		margin-right: 2%;
+		justify-content: space-between;
+		list-style: none;
+	}
+
+	.main_nav .active{
+		text-transform: uppercase;
+	}
+
+	.main_nav li:hover{
+		background-color: rgb(255, 255, 255)
+	}
+
+	.main_nav li{
+		display: inline;
+		justify-content: center;
+		color: black;
+		padding: 10px;
+		margin: 0 10px;
+	}
+
+	.main_nav li a{
+		color: black;
+	}
+
+	.navbar_toggle {
+		display: none;
+	}
+}
+
 
 @media screen and (prefers-reduced-motion: reduce){
 	.center_img{
 	  animation: none;
 	}
+
+    .flip-card:hover .flip-card-inner {
+        transform: none;
+    }
+      
+    .flip-card:focus .flip-card-inner {
+        transform: none;
+    }
 }

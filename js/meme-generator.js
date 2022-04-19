@@ -51,7 +51,7 @@ function init () {
     imageInput = document.getElementById('image-input');
     generateBtn = document.getElementById('generate-btn');
     canvas = document.getElementById('meme-canvas');
-    
+
     ctx = canvas.getContext('2d');
 
     canvas.width = canvas.height = 0;
